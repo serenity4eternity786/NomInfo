@@ -1,0 +1,31 @@
+{
+  "name": "nom-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.4",
+    "mongodb": "^2.2.16",
+    "events": "^1.1.1",
+    "unirest": "^0.5.1",
+    "body-parser": "^1.15.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serenity4eternity786/NomInfo.git"
+  },
+  "author": "Alisha Byford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serenity4eternity786/NomInfo/issues"
+  },
+  "homepage": "https://github.com/serenity4eternity786/NomInfo#readme"
+}

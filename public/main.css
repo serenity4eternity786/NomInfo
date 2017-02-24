@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    
+    /*delete me before production*/
+    /*border: 1px solid red;*/
+}
+
+html {
+    background: rgba(0, 0, 0, 0) url("atari.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body{
+    font-size: 20px;
+    
+}
+
+header{
+    text-align: center;
+    font-family: 'Arvo', serif;
+    color: honeydew;
+    text-shadow: 1px 0px 18px rgba(150, 150, 149, 1);
+    font-size: 5rem;
+    
+}
+
+main{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+}
+
+.recipe, .rate {
+    font-family: 'Arvo', serif;
+    font-size: 3rem;
+    color: honeydew;
+    text-shadow: 1px 0px 18px rgba(150, 150, 149, 1);
+    background-image: url("yellow2.png");
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 48%;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-right: 5.5px;
+    margin-left: 5.5px;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+}
+
+.recipe {
+    text-align: center;
+}
+
+.rate {
+    text-align: center;
+    
+}
+
+input, button {
+    background-color: beige;
+    font-family: 'Arvo', serif;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 45%;
+    font-size: 20px;
+    height: 50px;
+    
+}
+
+button {
+    width: 20%;
+}
+
+
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: small;
+}
+
+ul {
+    font-size: medium;
+    text-align: center;
+    font-style: oblique;
+    margin: 50px;
+    font-weight: bold;
+    list-style: none;
+    
+}
+li {
+    display: block;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid gray;
+    margin-bottom: 1rem;
+}
+.image-wrapper {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 5px;
+}
+.text-wrapper {
+    width: 69%;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    
+}
+.text-wrapper h2 {
+    font-size: 1.5rem;
+}
+.recipe-score {
+    padding-right: 5px;
+    font-size: x-large;
+    color: yellow;
+    padding-bottom: 30px;
+}
+
+.recipe-publisher {
+    padding-bottom: 30px;
+}
+
+.recipe-description{
+    font-style: italic;
+}
+
+h3 {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.delete-recipe-name {
+    margin: 1rem;
+}
