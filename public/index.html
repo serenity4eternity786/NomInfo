@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <title>Video Recipe Ratings</title>
     <link rel="stylesheet" type="text/css" href="main.css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 </head>
 
 <body>
     <header>
-        <h1>Video Recipe Search</h1>
+        <h1>NomInfo</h1>
+        <h6>A quick recipe search and shopping cart.</h6>
     </header>
     <main>
         <section class="signup">
@@ -21,8 +22,8 @@
         <section class="recipe">
             <h2>Recipes</h2>
             <form id="add-recipe">
-                <input type="text" class="custInput" id="recipe-input" placeholder="Enter Recipe"/>
-                <button type="submit" id="add">Add</button>
+                <!--<input type="text" class="custInput" id="recipe-input" placeholder=""/>-->
+                <!--<button type="submit" id="add">Add</button>-->
             </form>
             <div class="recipe-output">
                 <ul></ul>
@@ -32,12 +33,15 @@
         <section class="rate">
             <h2>Search</h2>
             
-            <h6>Not sure about a certain recipe? Go ahead and search for a recipe!</h6>
+            <h6></h6>
             <form id="s-f">
-                <input type="text" id="recipe-search" placeholder="Enter Ingredient"/>
+                <input type="text" id="recipe-search" placeholder=""/>
                 <button type="submit" id="recipeSearchButton">Add</button>
-                <ul></ul>
+                
             </form>
+            <div class="rate-output">
+            <ul></ul>
+            </div>
         </section>
     </main>
     <script

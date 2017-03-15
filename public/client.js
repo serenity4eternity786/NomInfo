@@ -21,16 +21,24 @@ function displayResults(inputData) {
     //create an empty variable to store one LI for each one the results
     var buildTheHtmlOutput = "";
     for (var i = 0; i < inputData.matches.length; i++) {
+        
+        var showIngredients = JSON.stringify(inputData.matches[i].ingredients);
+        
+        showIngredients = showIngredients.replace(/,/g, ", ");
+        showIngredients = showIngredients.replace(/"/g, '');
+        showIngredients = showIngredients.replace('[', '');
+        showIngredients = showIngredients.replace(']', '');
+        
         buildTheHtmlOutput += "<li>";
         buildTheHtmlOutput += "<div class='image-wrapper'><img src=" + inputData.matches[i].smallImageUrls + "></div>";
         buildTheHtmlOutput += "<div class='text-wrapper'><h2>" + inputData.matches[i].recipeName + "</h2>";
-        buildTheHtmlOutput += "<p><span class='recipe-score'>" + inputData.matches[i].ingredients + "</span>";
-        buildTheHtmlOutput += "<span class='recipe-publisher'>" + inputData.matches[i].cuisine + "</span></p>";
+        buildTheHtmlOutput += "<p><span class='recipe-score'>" + showIngredients + "</span>";
+        //buildTheHtmlOutput += "<span class='recipe-publisher'>" + inputData.matches[i].cuisine + "</span></p>";
         // buildTheHtmlOutput += "<p class='recipe-description'>" + inputData.matches[i].short_description + "</p></div>";
 
         buildTheHtmlOutput += "</li>";
     }
-    $(".rate form ul").html(buildTheHtmlOutput);
+    $(".rate-output ul").html(buildTheHtmlOutput);
 }
 
 function displayRecipeResults(result) {

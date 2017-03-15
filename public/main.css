@@ -20,21 +20,23 @@
 }
 
 html {
-    background: rgba(0, 0, 0, 0) url("atari.jpg") no-repeat center center fixed;
+    background: #883F6A;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    height: 100%;
 }
 body{
     font-size: 20px;
+    background: #883F6A;
+    background-size: 75%;
     
 }
 
 header{
     text-align: center;
-    font-family: 'Arvo', serif;
-    color: honeydew;
+    font-family: 'Raleway', serif;
+    color: #CDC27F;
     text-shadow: 1px 0px 18px rgba(150, 150, 149, 1);
     font-size: 5rem;
     
@@ -48,15 +50,14 @@ main{
     height: auto;
 }
 
-.recipe, .rate {
-    font-family: 'Arvo', serif;
+.rate {
+    font-family: 'Raleway', serif;
     font-size: 3rem;
-    color: honeydew;
+    color: #CDC27F;
     text-shadow: 1px 0px 18px rgba(150, 150, 149, 1);
     background-image: url("yellow2.png");
     border-radius: 0.5rem;
     padding: 2rem;
-    width: 48%;
     margin-bottom: 3rem;
     margin-top: 1rem;
     margin-right: 5.5px;
@@ -68,6 +69,39 @@ main{
 
 .recipe {
     text-align: center;
+    background: #537183;
+    border-right:1px solid #e5e5e5;
+    position:fixed;
+    top:30%;
+    height:auto;
+    left:0;
+    width:60px;
+    overflow:hidden;
+    -webkit-transition:width .05s linear;
+    transition:width .05s linear;
+    -webkit-transform:translateZ(0) scale(1,1);
+    z-index:1000;
+    
+    
+}
+
+.recipe h2 {
+    transform: rotate(270deg);
+    transform-origin: left top 0;
+    font-family: 'Raleway', serif;
+    color: #CDC27F;
+    margin-left: 0;
+    margin-top: 124px;
+    padding: 10px;
+    padding-bottom: 5px;
+    float: left;
+    display: block;
+}
+
+.recipe:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+
 }
 
 .rate {
@@ -77,8 +111,8 @@ main{
 
 input, button {
     background-color: beige;
-    font-family: 'Arvo', serif;
-    border-radius: 0.5rem;
+    font-family: 'Raleway', serif;
+    border-radius: 2.5rem;
     text-align: center;
     width: 45%;
     font-size: 20px;
@@ -90,24 +124,33 @@ button {
     width: 20%;
 }
 
+button:hover {background-color: #AB9E4F}
+
+button:active {
+  background-color: #CDC27F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 h6 {
     font-family: 'Ubuntu', sans-serif;
     font-size: small;
 }
 
-ul {
+.rate-output ul {
     font-size: medium;
     text-align: center;
     font-style: oblique;
-    margin: 50px;
     font-weight: bold;
     list-style: none;
+    width: 95%;
+    margin: 50px auto;
     
 }
-li {
-    display: block;
-    width: 100%;
+.rate-output li {
+    display: inline-block;
+    width: 32%;
     padding-bottom: 1rem;
     border-bottom: 2px solid gray;
     margin-bottom: 1rem;
@@ -118,21 +161,31 @@ li {
     display: inline-block;
     vertical-align: top;
     padding-bottom: 5px;
+    text-align: center;
+}
+.image-wrapper img {
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 3px #888888;
 }
 .text-wrapper {
-    width: 69%;
-    display: inline-block;
+    width: 90%;
+    display: block;
     vertical-align: top;
     font-weight: bold;
+    height: 200px;
+    overflow-y: auto;
     
 }
 .text-wrapper h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #D9BCCD;
 }
-.recipe-score {
+.text-wrapper p  .recipe-score {
     padding-right: 5px;
-    font-size: x-large;
-    color: yellow;
+    font-size: 0.9rem;
+    color: #D6DDE0;
     padding-bottom: 30px;
 }
 
