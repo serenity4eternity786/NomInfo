@@ -37,8 +37,8 @@ if (require.main === module) {
 //function to make the external API call
 var getRecipe = function(recipeName) {
     var emitter = new events.EventEmitter();
-    var keyword = 'chicken';
-    var cuisine = 'american';
+    var keyword = '';
+    var cuisine = '';
     unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=6d9e22ab&_app_key=e4270a20949b90bf9cca1017d935f12b&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
         .header("Accept", "application/json")
         .end(function(result) {

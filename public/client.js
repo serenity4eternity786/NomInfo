@@ -32,8 +32,8 @@ function displayResults(inputData) {
         buildTheHtmlOutput += "<li>";
         buildTheHtmlOutput += "<div class='image-wrapper'><img src=" + inputData.matches[i].smallImageUrls + "></div>";
         buildTheHtmlOutput += "<div class='text-wrapper'><h2>" + inputData.matches[i].recipeName + "</h2>";
+        buildTheHtmlOutput += "<span class='recipe-site'>" + inputData.matches[i].sourceDisplayName + "</span></p>";
         buildTheHtmlOutput += "<p><span class='recipe-score'>" + showIngredients + "</span>";
-        //buildTheHtmlOutput += "<span class='recipe-publisher'>" + inputData.matches[i].cuisine + "</span></p>";
         // buildTheHtmlOutput += "<p class='recipe-description'>" + inputData.matches[i].short_description + "</p></div>";
 
         buildTheHtmlOutput += "</li>";
