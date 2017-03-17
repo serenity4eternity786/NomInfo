@@ -30,7 +30,7 @@ function displayResults(inputData) {
         showIngredients = showIngredients.replace(']', '');
         
         buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += "<div class='image-wrapper'><img src=" + inputData.matches[i].smallImageUrls + "></div>";
+        buildTheHtmlOutput += "<button type='submit' class='image-wrapper'><img src='" + inputData.matches[i].smallImageUrls +"'></button>";
         buildTheHtmlOutput += "<div class='text-wrapper'><h2>" + inputData.matches[i].recipeName + "</h2>";
         buildTheHtmlOutput += "<span class='recipe-site'>" + inputData.matches[i].sourceDisplayName + "</span></p>";
         buildTheHtmlOutput += "<p><span class='recipe-score'>" + showIngredients + "</span>";
@@ -40,6 +40,51 @@ function displayResults(inputData) {
     }
     $(".rate-output ul").html(buildTheHtmlOutput);
 }
+
+$(document).on('click', '.image-wrapper', function(event) {
+    console.log('here');
+    //if the page refreshes when you submit the form use "preventDefault()" to force JavaScript to handle the form submission
+    event.preventDefault();
+    //get the value from the input box
+    var wishlistValue = $(this).parent().find('.text-wrapper h2').text();
+    console.log(wishlistValue);
+           //send new item
+        $.ajax({
+                type: "POST",
+                url: "/recipe/" + wishlistValue,
+                // data: q_string,
+                dataType: 'json'
+            })
+            .done(function(result) {
+                //console.log(result);
+                //   displayResults(result);
+            })
+            .fail(function(jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+
+        //get all items
+        $.ajax({
+                type: "GET",
+                url: "/recipe",
+                dataType: 'json'
+            })
+            .done(function(result) {
+                // console.log(result);
+                displayRecipeResults(result);
+            })
+            .fail(function(jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+
+
+});
+
+
 
 function displayRecipeResults(result) {
 
@@ -80,16 +125,16 @@ $(document).ready(function(e) {
     //port new recipe item to the DB
     $("#add-recipe").submit(function(e) {
         e.preventDefault();
-        var userInput = $("#recipe-input").val();
-
+        var wishlistValue = $("#recipe-input").val();
+        
         var q_string = {
-            'name': userInput
+            'name': wishlistValue
         };
 
         //send new item
         $.ajax({
                 type: "POST",
-                url: "/recipe/" + userInput,
+                url: "/recipe/" + wishlistValue,
                 // data: q_string,
                 dataType: 'json'
             })
