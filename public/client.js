@@ -57,7 +57,7 @@ $(document).on('click', '.image-wrapper', function(event) {
             })
             .done(function(result) {
                 //console.log(result);
-                //   displayResults(result);
+                displayResults(result);
             })
             .fail(function(jqXHR, error, errorThrown) {
                 console.log(jqXHR);
@@ -121,6 +121,22 @@ function addItem(message) {
 }
 //step two: use functions 
 $(document).ready(function(e) {
+    
+    //get all items
+        $.ajax({
+                type: "GET",
+                url: "/recipe",
+                dataType: 'json'
+            })
+            .done(function(result) {
+                // console.log(result);
+                displayRecipeResults(result);
+            })
+            .fail(function(jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
 
     //port new recipe item to the DB
     $("#add-recipe").submit(function(e) {
