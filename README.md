@@ -4,8 +4,8 @@
 Help users with different recipes based on what is searched. There is also a shopping cart app (with hover effects)
 so if users want to save a recipe, they can do so by clicking the picture of the recipe
 
-![Screenshots](https://github.com/serenity4eternity786/node-js-capstone/blob/master/Capture2.PNG)
-![Screenshots](https://github.com/serenity4eternity786/node-js-capstone/blob/master/Capture3.PNG)
+![Screenshots](https://github.com/serenity4eternity786/Nominfo/blob/master/nomcap2.PNG)
+![Screenshots](https://github.com/serenity4eternity786/Nominfo/blob/master/nomcap1.PNG)
 
 # API:
 https://www.yummly.com/api
