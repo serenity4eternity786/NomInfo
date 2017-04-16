@@ -205,8 +205,10 @@ h6 {
 h3 {
     padding: 10px;
     font-size: 0.9rem;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Raleway', sans-serif;
     overflow-x: auto;
+    color: #D9BCCD;
+    
 }
 
 .delete-recipe-name {
