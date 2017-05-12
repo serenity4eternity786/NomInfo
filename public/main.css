@@ -214,3 +214,9 @@ h3 {
 .delete-recipe-name {
     margin: 1rem;
 }
+
+.descript { 
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
