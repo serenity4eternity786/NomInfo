@@ -131,6 +131,10 @@ button {
     width: 20%;
 }
 
+button:hover {
+    background: #537183;
+}
+
 /*button:hover {background-color: #AB9E4F}*/
 
 button:active {
