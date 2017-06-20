@@ -160,7 +160,7 @@ h6 {
 }
 .rate-output li {
     display: inline-block;
-    width: 32%;
+    width: 50%;
     padding-bottom: 1rem;
     /*border-bottom: 2px solid gray;*/
     margin-bottom: 1rem;
