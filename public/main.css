@@ -166,13 +166,14 @@ h6 {
     margin-bottom: 1rem;
 }
 .image-wrapper {
-    width: 100%;
+    width: 30%;
     height: auto;
     display: inline-block;
     vertical-align: top;
     padding-bottom: 5px;
     text-align: center;
     background-color: transparent;
+    margin-right: 50px;
 }
 .image-wrapper img {
     width: 90%;

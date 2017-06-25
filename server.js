@@ -39,7 +39,7 @@ var getRecipe = function(recipeName) {
     var emitter = new events.EventEmitter();
     var keyword = '';
     var cuisine = '';
-    unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=6d9e22ab&_app_key=e4270a20949b90bf9cca1017d935f12b&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
+    unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=efb53f7e&_app_key=0ac4d25d064640db602125d899e35a71&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
         .header("Accept", "application/json")
         .end(function(result) {
             console.log(result.status, result.headers, result.body);
