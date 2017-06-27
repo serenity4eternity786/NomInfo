@@ -38,8 +38,9 @@ if (require.main === module) {
 var getRecipe = function(recipeName) {
     var emitter = new events.EventEmitter();
     var keyword = '';
-    var cuisine = '';
-    unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=efb53f7e&_app_key=0ac4d25d064640db602125d899e35a71&q=" + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true")
+    // var cuisine = '';
+    unirest.get("http://api.yummly.com/v1/api/recipes?_app_id=efb53f7e&_app_key=0ac4d25d064640db602125d899e35a71&q=&requirePictures=true")
+        //   + keyword + "&allowedCuisine[]=cuisine^cuisine-" + cuisine + "&requirePictures=true"
         .header("Accept", "application/json")
         .end(function(result) {
             console.log(result.status, result.headers, result.body);
